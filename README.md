@@ -7,21 +7,37 @@ The algorithm continues until the x-coordinate exceeds the y-coordinate, complet
 ### Algorithm 
 Step 1: Initialization
                           1.  Set x =0
+                          
                           2.   Set y = r
+                          
                           3.   Initialize the decision parameter: d = 1 - r
-                          4. Create an empty list to store points
+                          
+                          4. Create an empty list to store points  
+                          
  Step 2: Plot Initial Octant Points
+ 
      5. Plot the initial 8 symmetric points around the center using (x, y)
+     
  Step 3: Loop Until x > y
+ 
      6. While x < y, repeat:
+     
             Increment x by 1
+            
        If d < 0:
+       
            New decision parameter: d = d + 2*x + 1
+           
       Else:
                                                                                                                                                                        
           Decrement y by 1
+          
          Update decision parameter: d = d + 2*(x - y) + 1
+         
   Plot the 8 symmetric points for current (x, y)
+  
   Step 4: End
+  
      7.  Continue until x >= y
+     
      8.  Return or draw the collected points
